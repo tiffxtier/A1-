@@ -1,0 +1,18 @@
+length_input = input("Enter the length of the rectangle: ")
+width_input = input("Enter the width of the rectangle: ")
+
+if not length_input.replace('.', '', 1).isdigit():
+    print("Invalid input for length.")
+elif not width_input.replace('.', '', 1).isdigit():
+    print("Invalid input for width.")
+else:
+    length = float(length_input)
+    width = float(width_input)
+
+    if length <= 0:
+        print("Length must be a positive number.")
+    elif width <= 0:
+        print("Width must be a positive number.")
+    else:
+        area = length * width
+        print("Area of the rectangle:", area)
